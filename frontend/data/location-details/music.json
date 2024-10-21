@@ -1,11 +1,11 @@
 {
   "image": "music-scene",
-  "description": "A guitarist and sax player makes som funky noise.<br>The guitarist doesn't sing too well though.",
+  "description": "A guitarist and sax player make som funky noise.<br>The guitarist doesn't sing too well though.",
   "choices": {
-     "Jam with the band": {
+    "Jam with the band": {
       "if has happened": "offered to jam",
       "description": "You enter the stage and sing \"Oh lord won't you buy me... An Espresso machine\". Someone in the audience throws you a fiver.",
-      "money":5,
+      "money": 5,
       "show only once": true
     },
     "Wait": [
@@ -18,7 +18,7 @@
         "health": -5
       },
       {
-        "description": "The guitarist shouts out to you: \"You look like a hipp kid, why don't come on up and jam with us?\"",
+        "description": "The guitarist shouts out to you: \"You look like a hip kid, why don't come on up and jam with us?\"",
         "health": -5,
         "show only once": true,
         "happening": "offered to jam"
