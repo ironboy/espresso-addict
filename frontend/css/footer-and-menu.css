@@ -2,13 +2,19 @@
   The footer and its menu
 ------------------------------------------------------------------------------------------*/
 
+.content {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 footer {
   margin: 0 auto;
-  position: fixed;
   padding-bottom: 30px;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
 }
 
 menu {

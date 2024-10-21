@@ -1,0 +1,35 @@
+/*------------------------------------------------------------------------------------------
+  Gradients and backdrop with "ambient light effect"
+------------------------------------------------------------------------------------------*/
+
+.top-gradient {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 30vh;
+  display: block;
+  background-image: linear-gradient(to bottom, black, transparent);
+}
+
+.bottom-gradient {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 30vh;
+  display: block;
+  background-image: linear-gradient(to top, black, transparent);
+}
+
+.backdropper {
+  position: fixed;
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: black;
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+}

@@ -9,9 +9,13 @@ main {
 
 .big-image {
   margin: 10px auto 0;
-  width: 50%;
+  width: calc(50% - 100px);
   display: block;
+  padding: 30px;
+  background-color: rgb(255, 252, 240);
   border-radius: 10px;
+  border: 20px solid #5f2020;
+  border-image: repeating-linear-gradient(40deg, hsl(30, 50%, 15%), hsl(20, 50%, 30%), hsl(25, 40%, 20%) 8px) 60;
 }
 
 .description {
@@ -20,3 +24,24 @@ main {
   margin: 20px auto 0;
   text-align: center;
 }
+
+img.frame {
+  display: none;
+}
+
+/*
+.big-image {
+  margin: 5vw auto 6vw;
+  width: 34%;
+  display: block;
+}
+
+img.frame {
+  position: absolute;
+  width: 46vw;
+  display: block;
+  left: 27vw;
+  margin-top: 1vw;
+  aspect-ratio: 2.1/1.2;
+}
+*/
