@@ -1,7 +1,7 @@
 // Show a location (image, description etc)
 // [Called from start, doOnMenuChoice, updatePlayerStatus]
 function showLocation(loc, alternateDescription, alternateImage) {
-  // Use alteranate descriptions and image if the exist
+  // Use alternate descriptions and/or image if they exist
   // else use the normal ones provided for the location
   let image = alternateImage || loc.image;
   let description = alternateDescription || loc.description;
