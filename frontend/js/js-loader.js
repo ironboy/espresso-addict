@@ -17,6 +17,7 @@ jsLoader(
     "update-player-status.js",
     "update-progress-bars.js",
     "wait-around.js",
+    "fade-backdrop.js",
     "start.js"
   ]
 );

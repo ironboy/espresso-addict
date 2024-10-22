@@ -1,21 +1,13 @@
 // Show a location (image, description etc)
 // [Called from start, doOnMenuChoice, updatePlayerStatus]
-function showLocation(loc, alternateDescription, alternateImage) {
+async function showLocation(loc, alternateDescription, alternateImage) {
   // Use alternate descriptions and/or image if they exist
   // else use the normal ones provided for the location
   let image = alternateImage || loc.image;
   let description = alternateDescription || loc.description;
 
-  // tone in img
-  if (image !== window.lastImage) {
-    $('.viewport-bg').els[0].style.backgroundImage = `url("imgs/${image}.jpg")`;
-    let alpha = 1;
-    (function toneInBg() {
-      $('.backdropper').els[0].style.backgroundColor = `rgba(0,0,0,${alpha})`
-      alpha > 0.6 && (alpha -= 0.02) && setTimeout(toneInBg, 50);
-    })();
-  }
-  window.lastImage = image;
+  // fade out old backdrop
+  window.lastImage && image !== window.lastImage && await fadeBackdrop();
 
   // Write to elements
   $('.big-image').attr("src", "imgs/" + image + ".jpg");
@@ -31,4 +23,9 @@ function showLocation(loc, alternateDescription, alternateImage) {
   showBag();
   updateProgressBars();
   buildMenu(loc.choices);
+
+  // fade in new backdrop
+  $('.viewport-bg').els[0].style.backgroundImage = `url("imgs/${image}.jpg")`;
+  image !== window.lastImage && fadeBackdrop(true);
+  window.lastImage = image;
 }
